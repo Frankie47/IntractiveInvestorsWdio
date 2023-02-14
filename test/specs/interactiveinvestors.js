@@ -31,9 +31,7 @@ describe('My interactive investors landing page test', () => {
         await LandingPage.navigateToNews()
         await expect (await LandingPage.EditorsPicksisDisplayed()).to.equal(true);
         await expect (await LandingPage.editorsPicksSubHeadingTextIsDisplayed()).to.equal(editorsPicksSubHeadingText);
-       // await expect (await LandingPage.MostReadSubHeadingTextIsDisplayed()).to.equal("Top 10 most read articles today.");
-        
-       await expect (await browser.getUrl()).to.equal(EditorsPicks);
+        await expect (await browser.getUrl()).to.equal(EditorsPicks);
      } )
     
     })  
