@@ -12,7 +12,6 @@ import { tradingAccountUrl,
 describe('My interactive investors landing page test', () => {
     it('interactive investors Url and validation', async () => {
         await LandingPage.open()
-        await browser.pause(2000)
         await LandingPage.navigateToTradingAccount()
         await expect(await browser.getUrl()).to.equal(tradingAccountUrl);
 

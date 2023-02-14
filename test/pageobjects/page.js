@@ -7,13 +7,15 @@ export default class Page {
     * Opens a sub page of the page
     * @param path path of the sub page (e.g. /path/to/page.html)
     */
-    open (path) {
+    open () {
         browser.url("/")
         browser.maximizeWindow()
     }
 
-    navigateToUrl(){
-        browser.url("/")
-        browser.fullscreenWindow()
+    async waitForElementFully(element,timeOut){
+        timeOut = timeOut??5000
+        await element.waitForExist({ timeout: timeOut });
+        await element.waitForDisplayed({ timeout: timeOut })
     }
+
 }

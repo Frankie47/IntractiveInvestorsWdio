@@ -102,36 +102,31 @@ class LandingPage extends Page {
         await this.acceptCookiesBtn.click()
         await this.servicesBtn.click()
         await this.tradingAccount.click()
-        await browser.pause(3000)
     }
 
     async navigateToTransferMyPension(){
         await this.pensionBtn.click()
         await this.transferMyPension.click()
-        await browser.pause(3000)
     }
 
     async navigateToSearchShares(){
         await this.investmentBtn.click()
         await this.searchShares.click()
-        await browser.pause(3000)
     }
 
     async navigateTohelplearning(){
         await this.helplearningBtn.click()
         await this.QuickStartFunds.click()
-        await browser.pause(3000)
     }
 
     async QuickStartFundsisDisplayed(){
+        await this.waitForElementFully(this.QuickStartFunds)
         return this.QuickStartFunds.isDisplayed() 
     }
 
 
     async navigateToNews(){
         await this.NewsBtn.click()
-       // await this.EditorsPicks.click()
-        await browser.pause(3000)
     }
 
     async EditorsPicksisDisplayed(){
@@ -147,6 +142,7 @@ class LandingPage extends Page {
     }
 
     async howToTransferBtnIsDisplayed(){
+       await this.waitForElementFully(this.howToTransferBtn)
         return this.howToTransferBtn.isDisplayed()
     }
 
@@ -155,16 +151,16 @@ class LandingPage extends Page {
     }
 
     async openAnAccountIsDisplayed(){
+        await this.waitForElementFully(this.openAnAccountBtn)
         return this.openAnAccountBtn.isDisplayed()
     }
 
-    
 
     /** 
      * overwrite specific options to adapt it to page object
      */
     open () {
-        return super.open('login');
+        return super.open();
     }
 }
 
