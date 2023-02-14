@@ -1,7 +1,7 @@
 
 # Project Title
 
-This sample project is to automate interactive investors webdriverio and chai.
+This sample project is to automate interactive investors website using webdriverio and chai.
 
 
 
